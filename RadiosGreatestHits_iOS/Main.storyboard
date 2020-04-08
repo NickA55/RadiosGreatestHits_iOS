@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="FontAwesome5FreeRegular.otf">
+            <string>FontAwesome5Free-Regular</string>
+        </array>
+        <array key="FontAwesome5FreeSolid.otf">
+            <string>FontAwesome5Free-Solid</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RadioRedBG.png" translatesAutoresizingMaskIntoConstraints="NO" id="cNh-Lv-bzL">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Send a request" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eSA-6s-bBe">
+                                <rect key="frame" x="20" y="104" width="282" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RecordPlayer.png" translatesAutoresizingMaskIntoConstraints="NO" id="k3n-x1-buT">
+                                <rect key="frame" x="294" y="71" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="7Zv-DS-hgD"/>
+                                    <constraint firstAttribute="height" constant="100" id="MS4-iB-8fg"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NOW PLAYING" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QO8-Fh-YGp">
+                                <rect key="frame" x="20" y="308" width="374" height="21"/>
+                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[Now Playing Line 1]" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hzy-Cm-q0a">
+                                <rect key="frame" x="20" y="374" width="374" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="uKg-Iu-2SH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ni0-0C-Obb">
+                                <rect key="frame" x="78" y="514" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="FontAwesome5Free-Solid" family="Font Awesome 5 Free" pointSize="40"/>
+                                <state key="normal" title="">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnStop_Click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oZp-8J-f6M"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Radio's Greatest Hits!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nSe-lB-BBx">
+                                <rect key="frame" x="20" y="238" width="374" height="27"/>
+                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[Now Playing Line 2]" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1sg-Lq-AwL">
+                                <rect key="frame" x="20" y="403" width="374" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="XzC-XZ-av1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yWL-hW-NEt">
+                                <rect key="frame" x="157" y="489" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="MWJ-ZA-icy"/>
+                                    <constraint firstAttribute="height" constant="100" id="ogg-Uy-xQO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="FontAwesome5Free-Regular" family="Font Awesome 5 Free" pointSize="100"/>
+                                <state key="normal" title="">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnPlay_Click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KZp-I8-sX6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vPj-T2-100">
+                                <rect key="frame" x="288" y="514" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="FontAwesome5Free-Solid" family="Font Awesome 5 Free" pointSize="40"/>
+                                <state key="normal" title="">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnMute_Click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OPd-fL-3kI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="yWL-hW-NEt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="137" id="2P4-St-QnF"/>
+                            <constraint firstItem="cNh-Lv-bzL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="3LB-vd-Mxr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eSA-6s-bBe" secondAttribute="trailing" constant="92" id="3Zm-E5-tPY"/>
+                            <constraint firstItem="eSA-6s-bBe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="6Bp-6D-V1U"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yWL-hW-NEt" secondAttribute="trailing" constant="137" id="6jN-2n-sd1"/>
+                            <constraint firstItem="yWL-hW-NEt" firstAttribute="top" secondItem="1sg-Lq-AwL" secondAttribute="bottom" constant="65" id="CCS-ff-dfd"/>
+                            <constraint firstItem="nSe-lB-BBx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="CQd-dm-eta"/>
+                            <constraint firstItem="QO8-Fh-YGp" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="ENe-Um-X9r"/>
+                            <constraint firstItem="QO8-Fh-YGp" firstAttribute="top" secondItem="nSe-lB-BBx" secondAttribute="bottom" constant="43" id="GC4-hs-43v"/>
+                            <constraint firstItem="1sg-Lq-AwL" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="NWN-vO-EDu"/>
+                            <constraint firstAttribute="bottom" secondItem="cNh-Lv-bzL" secondAttribute="bottom" id="OB2-k1-Bqe"/>
+                            <constraint firstItem="nSe-lB-BBx" firstAttribute="top" secondItem="k3n-x1-buT" secondAttribute="bottom" constant="67" id="Off-fF-Rtp"/>
+                            <constraint firstItem="Hzy-Cm-q0a" firstAttribute="top" secondItem="QO8-Fh-YGp" secondAttribute="bottom" constant="45" id="Qge-qT-PyG"/>
+                            <constraint firstItem="Hzy-Cm-q0a" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Taz-fu-hBY"/>
+                            <constraint firstItem="1sg-Lq-AwL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="azx-Cj-U8r"/>
+                            <constraint firstItem="1sg-Lq-AwL" firstAttribute="top" secondItem="Hzy-Cm-q0a" secondAttribute="bottom" constant="8" id="cUg-yi-yb3"/>
+                            <constraint firstItem="k3n-x1-buT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="27" id="d8p-bv-kwg"/>
+                            <constraint firstItem="eSA-6s-bBe" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="i5n-MU-6jY"/>
+                            <constraint firstItem="k3n-x1-buT" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="iaa-rU-HPS"/>
+                            <constraint firstItem="QO8-Fh-YGp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="mwB-cL-Huc"/>
+                            <constraint firstAttribute="trailing" secondItem="cNh-Lv-bzL" secondAttribute="trailing" id="ou2-wF-udP"/>
+                            <constraint firstItem="Hzy-Cm-q0a" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="s0e-6b-lsj"/>
+                            <constraint firstItem="cNh-Lv-bzL" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="u6K-ot-Daq"/>
+                            <constraint firstItem="nSe-lB-BBx" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="zmD-Qn-VVf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnMute" destination="vPj-T2-100" id="1Bu-Hc-Acg"/>
+                        <outlet property="btnPlay" destination="yWL-hW-NEt" id="FxA-h1-kTW"/>
+                        <outlet property="btnStop" destination="ni0-0C-Obb" id="SUG-Jq-apM"/>
+                        <outlet property="lblNowPlaying1" destination="Hzy-Cm-q0a" id="CtD-pz-pJn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1.4492753623188408" y="0.0"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="RadioRedBG.png" width="128" height="128"/>
+        <image name="RecordPlayer.png" width="128" height="128"/>
+    </resources>
+</document>
