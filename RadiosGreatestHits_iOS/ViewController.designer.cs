@@ -19,16 +19,28 @@ namespace RadiosGreatestHits_iOS
 		UIKit.UIButton btnPlay { get; set; }
 
 		[Outlet]
+		UIKit.UIButton btnSendRequest { get; set; }
+
+		[Outlet]
 		UIKit.UIButton btnStop { get; set; }
 
 		[Outlet]
 		UIKit.UILabel lblNowPlaying1 { get; set; }
+
+		[Outlet]
+		UIKit.UILabel lblPlayerStatus { get; set; }
+
+		[Outlet]
+		UIKit.UITextField txtRequest { get; set; }
 
 		[Action ("btnMute_Click:")]
 		partial void btnMute_Click (UIKit.UIButton sender);
 
 		[Action ("btnPlay_Click:")]
 		partial void btnPlay_Click (UIKit.UIButton sender);
+
+		[Action ("btnSendRequest_Click:")]
+		partial void btnSendRequest_Click (UIKit.UIButton sender);
 
 		[Action ("btnStop_Click:")]
 		partial void btnStop_Click (UIKit.UIButton sender);
@@ -53,6 +65,21 @@ namespace RadiosGreatestHits_iOS
 			if (lblNowPlaying1 != null) {
 				lblNowPlaying1.Dispose ();
 				lblNowPlaying1 = null;
+			}
+
+			if (lblPlayerStatus != null) {
+				lblPlayerStatus.Dispose ();
+				lblPlayerStatus = null;
+			}
+
+			if (txtRequest != null) {
+				txtRequest.Dispose ();
+				txtRequest = null;
+			}
+
+			if (btnSendRequest != null) {
+				btnSendRequest.Dispose ();
+				btnSendRequest = null;
 			}
 		}
 	}
