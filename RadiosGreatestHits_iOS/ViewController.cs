@@ -51,6 +51,9 @@ namespace RadiosGreatestHits_iOS
             g.CancelsTouchesInView = false; //for iOS5
 
             View.AddGestureRecognizer(g);
+
+            lblPlayerStatus.Hidden = true;
+            lblNowPlaying1.Text = "(Stream stopped)";
         }
 
         public override void ViewDidAppear(bool animated)
@@ -98,6 +101,8 @@ namespace RadiosGreatestHits_iOS
                 isPaused = false;
                 isPlaying = true;
 
+                lblNowPlaying1.Text = "(Buffering...)";
+
                 StartTimer();
 
 
@@ -111,6 +116,8 @@ namespace RadiosGreatestHits_iOS
                 StopTimer();
 
                 player.Pause();
+
+                lblNowPlaying1.Text = "(Stream paused)";
             }
         }
 
@@ -137,6 +144,8 @@ namespace RadiosGreatestHits_iOS
 
         partial void btnStop_Click(UIButton sender)
         {
+            lblNowPlaying1.Text = "(Stream stopped)";
+
             if (player != null)
             {
                 player.Dispose();
@@ -195,7 +204,12 @@ namespace RadiosGreatestHits_iOS
             }
             catch (Exception ex)
             {
-                // Some other exception occurred
+                var okAlertController = UIAlertController.Create("Email Request",
+                    $"An error occured sending email: {ex.Message}", UIAlertControllerStyle.Alert);
+
+                okAlertController.AddAction(UIAlertAction.Create("OK", UIAlertActionStyle.Default, null));
+
+                PresentViewController(okAlertController, true, null);
             }
 
             txtRequest.Text = "";
