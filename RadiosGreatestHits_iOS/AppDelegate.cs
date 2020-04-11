@@ -1,4 +1,5 @@
-﻿using Foundation;
+﻿using AVFoundation;
+using Foundation;
 using UIKit;
 
 namespace RadiosGreatestHits_iOS
@@ -17,6 +18,11 @@ namespace RadiosGreatestHits_iOS
         {
             // Override point for customization after application launch.
             // If not required for your application you can safely delete this method
+            NSError sessionError = null;
+            AVAudioSession.SharedInstance().SetCategory(AVAudioSession.CategoryPlayback, out sessionError);
+
+            AVAudioSession.SharedInstance().SetActive(true, out sessionError);
+
             return true;
         }
 
