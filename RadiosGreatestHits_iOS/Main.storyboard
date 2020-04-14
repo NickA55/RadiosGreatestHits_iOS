@@ -29,20 +29,26 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RadioRedBG" translatesAutoresizingMaskIntoConstraints="NO" id="cNh-Lv-bzL">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Send a request" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eSA-6s-bBe">
-                                <rect key="frame" x="24" y="148" width="348" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Send a request" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="eSA-6s-bBe">
+                                <rect key="frame" x="24" y="148" width="297" height="34"/>
+                                <color key="backgroundColor" red="0.19607843137254902" green="0.0" blue="0.019607843137254902" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="kJM-Mh-GB9"/>
                                 </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uUQ-Hd-4ZP">
-                                <rect key="frame" x="329" y="128" width="85" height="74"/>
+                                <rect key="frame" x="319" y="128" width="85" height="74"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="85" id="9Sw-ZY-MTx"/>
                                 </constraints>
-                                <state key="normal" image="RecordPlayer"/>
+                                <fontDescription key="fontDescription" name="FontAwesome5Free-Regular" family="Font Awesome 5 Free" pointSize="39"/>
+                                <state key="normal" title="">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="btnSendRequest_Click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CSM-Vd-2H7"/>
                                 </connections>
@@ -50,8 +56,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Rm-iG-otG">
                                 <rect key="frame" x="0.0" y="218" width="414" height="166"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Radio's Greatest Hits!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nSe-lB-BBx">
-                                        <rect key="frame" x="86.5" y="8" width="241" height="28"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Radios Greatest Hits!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nSe-lB-BBx">
+                                        <rect key="frame" x="89.5" y="8" width="235.5" height="28"/>
                                         <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="24"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -80,7 +86,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yWL-hW-NEt">
-                                <rect key="frame" x="157" y="383" width="100" height="112"/>
+                                <rect key="frame" x="149.5" y="383" width="115" height="129"/>
                                 <fontDescription key="fontDescription" name="FontAwesome5Free-Regular" family="Font Awesome 5 Free" pointSize="100"/>
                                 <state key="normal" title="">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -133,7 +139,7 @@
                             <constraint firstItem="cNh-Lv-bzL" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="23p-zv-BjS"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="1sg-Lq-AwL" secondAttribute="bottom" constant="28" id="2MM-MU-D3e"/>
                             <constraint firstItem="ni0-0C-Obb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="3Bo-cN-rj9"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="eSA-6s-bBe" secondAttribute="trailing" constant="22" id="3Qf-ba-FSt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eSA-6s-bBe" secondAttribute="trailing" constant="73" id="3Qf-ba-FSt"/>
                             <constraint firstItem="ni0-0C-Obb" firstAttribute="top" secondItem="3Rm-iG-otG" secondAttribute="bottom" constant="-1" id="9gJ-tM-P1f"/>
                             <constraint firstAttribute="trailing" secondItem="3Rm-iG-otG" secondAttribute="trailing" id="Ce8-Wb-Wws"/>
                             <constraint firstItem="uUQ-Hd-4ZP" firstAttribute="centerY" secondItem="eSA-6s-bBe" secondAttribute="centerY" id="DLg-PB-6f1"/>
@@ -149,7 +155,7 @@
                             <constraint firstItem="vPj-T2-100" firstAttribute="top" secondItem="3Rm-iG-otG" secondAttribute="bottom" constant="-1" id="o80-NQ-hLy"/>
                             <constraint firstItem="1sg-Lq-AwL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="ocB-IB-0Ze"/>
                             <constraint firstItem="yWL-hW-NEt" firstAttribute="top" secondItem="3Rm-iG-otG" secondAttribute="bottom" constant="-1" id="sEP-sA-Uj0"/>
-                            <constraint firstItem="uUQ-Hd-4ZP" firstAttribute="trailing" secondItem="3Rm-iG-otG" secondAttribute="trailing" id="yPk-kn-Mwh"/>
+                            <constraint firstItem="uUQ-Hd-4ZP" firstAttribute="trailing" secondItem="3Rm-iG-otG" secondAttribute="trailing" constant="-10" id="yPk-kn-Mwh"/>
                             <constraint firstItem="eSA-6s-bBe" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="104" id="zcJ-dO-axa"/>
                         </constraints>
                     </view>
@@ -165,11 +171,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-7.2000000000000002" y="0.0"/>
+            <point key="canvasLocation" x="-7.2463768115942031" y="0.0"/>
         </scene>
     </scenes>
     <resources>
         <image name="RadioRedBG" width="469" height="1015"/>
-        <image name="RecordPlayer" width="256" height="226.5"/>
     </resources>
 </document>

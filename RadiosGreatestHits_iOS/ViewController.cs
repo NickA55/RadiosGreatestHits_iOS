@@ -54,6 +54,19 @@ namespace RadiosGreatestHits_iOS
 
             lblPlayerStatus.Hidden = true;
             lblNowPlaying1.Text = "(Stream stopped)";
+
+            //NSAttributedString* str = [[NSAttributedString alloc]
+            //initWithString: @"Some Text" attributes:@{ NSForegroundColorAttributeName:[UIColor redColor] }];
+            //self.myTextField.attributedPlaceholder = str;
+
+            UIStringAttributes atts = new UIStringAttributes();
+            atts.ForegroundColor = UIColor.White;
+
+            NSAttributedString phString = new NSAttributedString("Send a request...", atts);
+            txtRequest.AttributedPlaceholder = phString;
+
+            btnSendRequest.SetTitle(@"", UIControlState.Normal);
+
         }
 
         public override void ViewDidAppear(bool animated)
@@ -148,6 +161,10 @@ namespace RadiosGreatestHits_iOS
 
             if (player != null)
             {
+                player.Muted = false;
+                btnMute.SetTitle(@"", UIControlState.Normal);
+                btnMute.SetTitleColor(UIColor.White, UIControlState.Normal);
+
                 player.Dispose();
 
                 btnPlay.SetTitle(@"", UIControlState.Normal); // Play Button
